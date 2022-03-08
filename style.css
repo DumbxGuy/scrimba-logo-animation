@@ -1,0 +1,111 @@
+:root {
+  --toprect: #c6b9ff;
+  --midrect: #ddeae1;
+  --bottomrect: #fdddb4;
+  --backgrouncolor: #1c1924;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--backgrouncolor);
+}
+
+.main-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.toprect {
+  margin: 0px 0px 10px 0px;
+  height: 60px;
+  width: 180px;
+  background-color: var(--toprect);
+  border-radius: 25px;
+  animation: toprect 1000ms ease-out 0ms 4;
+}
+
+.midrect {
+  margin: 0px 0px 10px 0px;
+  height: 60px;
+  width: 120px;
+  background-color: var(--midrect);
+  border-radius: 25px;
+  animation: midrect 1050ms ease-out 0ms 4;
+}
+
+.bottomrect {
+  margin: 0px 0px 10px -60px;
+  height: 60px;
+  width: 180px;
+  background-color: var(--bottomrect);
+  border-radius: 25px;
+  animation: bottomrect 1100ms ease-out 0ms 4;
+}
+
+.bottomrect-left {
+  margin: 0px 0px 0px -78px;
+  height: 60px;
+  width: 60px;
+  background-color: var(--bottomrect);
+  border-radius: 25px;
+}
+
+@keyframes toprect {
+  /* 0% {
+    opacity: 0;
+    transform: translate(0px);
+  }
+  33% {
+    opacity: 0.2;
+    transform: translate(150px);
+  }
+  55% {
+    opacity: 0.4;
+    transform: translate(260px);
+  }
+  77% {
+    opacity: 0.6;
+    transform: translate(380px);
+  }
+  100% {
+    opacity: 0.6;
+    transform: translate(480px);
+  } */
+
+  from {
+    opacity: 0;
+    transform: translate(0px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(880px);
+  }
+}
+
+@keyframes midrect {
+  from {
+    opacity: 0;
+    transform: translate(0px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(880px);
+  }
+}
+
+@keyframes bottomrect {
+  from {
+    opacity: 0;
+    transform: translateZ(0px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(880px);
+  }
+}
